@@ -1,18 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="horizontal" >
-
-    <EditText android:id="@+id/edit_message"
-        android:layout_weight="1"
-        android:layout_width="0dp"
+    
+    <TextView
+        android:id="@+id/MyText"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="@string/edit_message" />
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="True"
+        android:text="Hello Android" />
+
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/MyText"
+        android:layout_below="@+id/MyText"
+        android:layout_marginTop="243dp"
         android:onClick="sendMessage"
         android:text="@string/button_send" />
-</LinearLayout>
+
+</RelativeLayout>
